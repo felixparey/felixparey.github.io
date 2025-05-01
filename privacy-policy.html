@@ -3,61 +3,607 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Basic Strategy: Blackjack</title>
+    <title>Privacy Policy</title>
     <style>
+        /* Base Styles */
         body {
-            font-family: sans-serif;
-            line-height: 1.6;
-            margin: 2em;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 1em;
-            background-color: #f9f9f9;
+            font-family: Arial, sans-serif; /* Added sans-serif fallback */
+            line-height: 1.5;
+            color: #333; /* Default text color */
+            margin: 2rem; /* Added some margin */
+            background: #fff; /* Explicit white background */
+        }
+
+        /* Custom Classes from Original - Refined */
+        [data-custom-class='body'] {
+           /* Background is handled by body tag now */
+        }
+
+        [data-custom-class='title'], [data-custom-class='title'] * {
+            font-family: Arial, sans-serif;
+            font-size: 1.625rem; /* 26px / 16px */
+            color: #000000;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        [data-custom-class='subtitle'], [data-custom-class='subtitle'] * {
+            font-family: Arial, sans-serif;
+            color: #595959;
+            font-size: 0.875rem; /* 14px / 16px */
+            font-weight: bold;
+            display: block; /* Make subtitle block level */
+            margin-bottom: 2rem;
+        }
+
+        [data-custom-class='heading_1'], [data-custom-class='heading_1'] * {
+            font-family: Arial, sans-serif;
+            font-size: 1.1875rem; /* 19px / 16px */
+            color: #000000;
+            font-weight: bold;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        [data-custom-class='heading_2'], [data-custom-class='heading_2'] * {
+            font-family: Arial, sans-serif;
+            font-size: 1.0625rem; /* 17px / 16px */
+            color: #000000;
+            font-weight: bold;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        [data-custom-class='body_text'], [data-custom-class='body_text'] * {
+            color: #595959;
+            font-size: 0.875rem; /* 14px / 16px */
+            font-family: Arial, sans-serif;
+            /* line-height is inherited from body or set on p/li */
+        }
+
+        [data-custom-class='link'], [data-custom-class='link'] * {
+            color: #3030F1;
+            /* font-size inherited */
+            /* font-family inherited */
+            word-break: break-word;
+            text-decoration: none; /* Optional: remove underline */
+        }
+        [data-custom-class='link']:hover,
+        [data-custom-class='link']:focus {
+            text-decoration: underline; /* Add underline on hover/focus */
+        }
+
+        /* Semantic Element Styling */
+        h1 { /* Applied to main title */
+           font-size: 1.625rem;
+           color: #000000;
+           font-weight: bold;
+           margin-bottom: 0.5rem;
+        }
+
+        h2 { /* Applied to main sections like TABLE OF CONTENTS */
+           font-size: 1.1875rem;
+           color: #000000;
+           font-weight: bold;
+           margin-top: 2rem;
+           margin-bottom: 1rem;
+        }
+
+         h3 { /* Applied to sub-sections */
+           font-size: 1.0625rem;
+           color: #000000;
+           font-weight: bold;
+           margin-top: 1.5rem;
+           margin-bottom: 0.75rem;
+         }
+
+        p {
+           color: #595959;
+           font-size: 0.875rem;
+           line-height: 1.5;
+           margin-bottom: 1rem; /* Spacing below paragraphs */
+        }
+
+        ul, ol {
+           margin-bottom: 1rem;
+           padding-left: 2rem; /* Indentation for lists */
+        }
+
+        li {
+           color: #595959;
+           font-size: 0.875rem;
+           line-height: 1.5;
+           margin-bottom: 0.5rem; /* Spacing between list items */
+        }
+
+        ul {
+          list-style-type: square;
+        }
+        ul > li > ul {
+          list-style-type: circle;
+        }
+        ul > li > ul > li > ul {
+          list-style-type: square;
+        }
+
+        strong {
+            font-weight: bold; /* Ensure strong tag is bold */
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.875rem; /* Match body text size */
+        }
+        th, td {
+            border: 1px solid #ccc; /* Lighter border */
+            padding: 0.5rem;
+            text-align: left;
+            vertical-align: top; /* Align content to top */
+            color: #595959;
+        }
+        th {
+            background-color: #f2f2f2; /* Light grey background for headers */
             color: #333;
+            font-weight: bold;
         }
-        h1, h2 {
-            color: #1a1a1a;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 0.3em;
+        /* Ensure consistent borders */
+        table, th, td {
+            border: 1px solid #ccc;
         }
-        a {
-            color: #007aff; /* Apple's standard link color */
+        thead th {
+            border-bottom: 2px solid #ccc; /* Slightly thicker bottom border for header row */
         }
-        .container {
-             background-color: #fff;
-             padding: 2em;
-             box-shadow: 0 0 10px rgba(0,0,0,0.05);
-             border-radius: 8px;
+
+
+        /* Utility - Can be removed if placeholders are deleted */
+        .block-component,
+        .question,
+        .statement-end-if-in-editor {
+             /* display: none; */
         }
+
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Privacy Policy for Basic Strategy: Blackjack</h1>
+<body data-custom-class="body">
 
-        <p><strong>Effective Date:</strong> 26/04/2025</p>
+    <h1 data-custom-class="title">PRIVACY POLICY</h1>
+    <span data-custom-class="subtitle">Last updated April 30, 2025</span>
 
-        <h2>Introduction</h2>
-        <p>This Privacy Policy applies to the mobile application "Basic Strategy: Blackjack" (the "App"). We are committed to protecting your privacy. This policy outlines our practices concerning user data.</p>
+    <p data-custom-class="body_text">
+        This Privacy Notice for Felix Parey ("<strong>we</strong>," "<strong>us</strong>," or "<strong>our</strong>"), describes how and why we might access, collect, store, use, and/or share ("<strong>process</strong>") your personal information when you use our services ("<strong>Services</strong>"), including when you:
+    </p>
+    <ul>
+        <li data-custom-class="body_text">Download and use our mobile application (Basic Strategy: Blackjack), or any other application of ours that links to this Privacy Notice</li>
+        <li data-custom-class="body_text">Engage with us in other related ways, including any sales, marketing, or events</li>
+    </ul>
+    <p data-custom-class="body_text">
+        <strong>Questions or concerns?</strong> Reading this Privacy Notice will help you understand your privacy rights and choices. We are responsible for making decisions about how your personal information is processed. If you do not agree with our policies and practices, please do not use our Services. If you still have any questions or concerns, please contact us at <a href="mailto:privacy@felixparey.com" data-custom-class="link">privacy@felixparey.com</a>.
+    </p>
 
-        <h2>Data Collection and Usage</h2>
-        <p>We want to be completely transparent about our data practices. <strong>Basic Strategy: Blackjack does not collect, store, use, or transmit any personal data or non-personal data from its users.</strong></p>
-        <p>All functionalities and processes within the App occur exclusively on the user's device. Any data generated through the use of the App (such as user-created content or settings, if applicable) remains solely on the user's device and is not accessible to us or any third party through the App.</p>
+    <h2 data-custom-class="heading_1">SUMMARY OF KEY POINTS</h2>
+    <p data-custom-class="body_text">
+        <strong><em>This summary provides key points from our Privacy Notice, but you can find out more details about any of these topics by clicking the link following each key point or by using our <a data-custom-class="link" href="#toc">table of contents</a> below to find the section you are looking for.</em></strong>
+    </p>
+    <p data-custom-class="body_text">
+        <strong>What personal information do we process?</strong> When you visit, use, or navigate our Services, we may process personal information depending on how you interact with us and the Services, the choices you make, and the products and features you use. This includes diagnostic and usage data (like crash reports and session duration) if you choose to share this through your device's operating system settings. Learn more about <a data-custom-class="link" href="#infocollect">information we collect</a>.
+    </p>
+    <p data-custom-class="body_text">
+        <strong>Do we process any sensitive personal information?</strong> We do not process sensitive personal information.
+    </p>
+    <p data-custom-class="body_text">
+        <strong>Do we collect any information from third parties?</strong> We do not collect information from third-party sources, other than diagnostic data which may be provided via the mobile platform operator (e.g., Apple) if you have opted-in to sharing.
+    </p>
+    <p data-custom-class="body_text">
+        <strong>How do we process your information?</strong> We process your information to provide, improve, and administer our Services (including troubleshooting and analyzing usage patterns from diagnostic data), communicate with you, for security and fraud prevention, and to comply with law. We may also process your information for other purposes with your consent. We process your information only when we have a valid legal reason to do so. Learn more about <a data-custom-class="link" href="#infouse">how we process your information</a>.
+    </p>
+    <p data-custom-class="body_text">
+        <strong>In what situations and with which parties do we share personal information?</strong> We may share information in specific situations and with specific third parties (e.g., service providers involved in business transfers, if any). We do not sell or share your personal information with third parties for their marketing purposes. Learn more about <a data-custom-class="link" href="#whoshare">when and with whom we share your personal information</a>.
+    </p>
+    <p data-custom-class="body_text">
+        <strong>What are your rights?</strong> Depending on where you are located geographically, the applicable privacy law may mean you have certain rights regarding your personal information. Learn more about <a data-custom-class="link" href="#privacyrights">your privacy rights</a>.
+    </p>
+    <p data-custom-class="body_text">
+        <strong>How do you exercise your rights?</strong> The easiest way to exercise your rights is by submitting a <a data-custom-class="link" href="https://app.termly.io/notify/0df80ea1-d38f-4471-af6e-8b20789c3866" rel="noopener noreferrer" target="_blank">data subject access request</a>, or by contacting us. We will consider and act upon any request in accordance with applicable data protection laws. You can manage sharing of diagnostic data via your device's operating system settings.
+    </p>
+    <p data-custom-class="body_text">
+        Want to learn more about what we do with any information we collect? <a data-custom-class="link" href="#toc">Review the Privacy Notice in full</a>.
+    </p>
 
-        <h2>Third-Party Services</h2>
-        <p>The App <strong>does not</strong> integrate with any third-party services, analytics platforms, advertising networks, or external servers. There is no data sharing or transmission between the App and any external entity.</p>
+    <h2 data-custom-class="heading_1" id="toc">TABLE OF CONTENTS</h2>
+    <ol>
+        <li><a data-custom-class="link" href="#infocollect">WHAT INFORMATION DO WE COLLECT?</a></li>
+        <li><a data-custom-class="link" href="#infouse">HOW DO WE PROCESS YOUR INFORMATION?</a></li>
+        <li><a data-custom-class="link" href="#legalbases">WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR PERSONAL INFORMATION?</a></li>
+        <li><a data-custom-class="link" href="#whoshare">WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?</a></li>
+        <li><a data-custom-class="link" href="#inforetain">HOW LONG DO WE KEEP YOUR INFORMATION?</a></li>
+        <li><a data-custom-class="link" href="#privacyrights">WHAT ARE YOUR PRIVACY RIGHTS?</a></li>
+        <li><a data-custom-class="link" href="#DNT">CONTROLS FOR DO-NOT-TRACK FEATURES</a></li>
+        <li><a data-custom-class="link" href="#uslaws">DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?</a></li>
+        <li><a data-custom-class="link" href="#otherlaws">DO OTHER REGIONS HAVE SPECIFIC PRIVACY RIGHTS?</a></li>
+        <li><a data-custom-class="link" href="#policyupdates">DO WE MAKE UPDATES TO THIS NOTICE?</a></li>
+        <li><a data-custom-class="link" href="#contact">HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</a></li>
+        <li><a data-custom-class="link" href="#request">HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?</a></li>
+    </ol>
 
-        <h2>Children's Privacy</h2>
-        <p>Since the App does not collect any data, it does not knowingly collect information from children under the age of 13 (or the relevant minimum age threshold in applicable jurisdictions). The App is designed for a general audience.</p>
+    <h2 data-custom-class="heading_1" id="infocollect">1. WHAT INFORMATION DO WE COLLECT?</h2>
+    <h3 data-custom-class="heading_2" id="personalinfo">Personal information you disclose to us</h3>
+    <p data-custom-class="body_text">
+        <strong><em>In Short:</em></strong> <em>We collect personal information that you voluntarily provide to us, but we do not require identifiable information like name or email to use our core Services.</em>
+    </p>
+    <p data-custom-class="body_text">
+        We collect personal information that you voluntarily provide to us *if* you contact us directly (e.g., via email) or express an interest in obtaining information about us or our products and Services. We do not require registration or collection of direct identifiers like name or email address to use our mobile application.
+    </p>
 
-        <h2>Changes to This Privacy Policy</h2>
-        <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes.</p>
-        <p>Changes to this Privacy Policy are effective when they are posted on this page.</p>
+    <h3 data-custom-class="heading_2">Information automatically collected</h3>
+    <p data-custom-class="body_text">
+        <strong><em>In Short:</em></strong> <em>Diagnostic and usage data is collected automatically *if* you opt-in via your device settings. This data helps us improve our app.</em>
+    </p>
+    <p data-custom-class="body_text">
+        We automatically collect certain information when you use the Services. This information does not reveal your specific identity (like your name or contact information unless you provide it separately, e.g., via email) but includes device, diagnostic, and usage information.
+    </p>
+     <p data-custom-class="body_text">
+         Specifically, if you choose to enable sharing of diagnostic and usage data through your mobile device's operating system settings (e.g., Apple's "Share iPhone & Watch Analytics" or similar options), we may receive information related to your use of our application(s). This data collection is facilitated by the platform provider (e.g., Apple) based on your consent given through the device settings. The information we may receive includes:
+    </p>
+    <ul>
+        <li data-custom-class="body_text">
+            <strong>Log and Usage Data:</strong> Service-related, diagnostic, usage, and performance information. This can include details about your activity in the Services (e.g., session duration, features used, performance metrics, date/time stamps), device event information (system activity, error reports/crash dumps, hardware settings), IP address (which may be anonymized or truncated by the platform provider), device identifiers, operating system, and browser/device characteristics.
+        </li>
+        <li data-custom-class="body_text">
+             <strong>Device Data:</strong> Information about the device you use, such as device model, operating system version, device identifiers, device settings, application identification numbers, and potentially mobile carrier or network information associated with crash reports.
+        </li>
+        </ul>
+     <p data-custom-class="body_text">
+         This diagnostic and usage information is primarily needed to maintain the security and operation of our Services, to identify and fix bugs, understand usage patterns, improve app performance and features, and for internal analytics and reporting purposes.
+    </p>
+     <p data-custom-class="body_text">
+        All personal information that you *voluntarily* provide to us (e.g., if you contact us via email) must be true, complete, and accurate, and you must notify us of any changes to such personal information.
+    </p>
 
-        <h2>Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, please contact us:</p>
-        <p><strong>By email:</strong> <a href="mailto:privacy@felixparey.com">privacy@felixparey.com</a></p>
-    </div>
+    <h3 data-custom-class="heading_2" id="sensitiveinfo">Sensitive Information</h3>
+     <p data-custom-class="body_text">We do not process sensitive personal information.</p>
+
+    <h2 data-custom-class="heading_1" id="infouse">2. HOW DO WE PROCESS YOUR INFORMATION?</h2>
+    <p data-custom-class="body_text">
+        <strong><em>In Short:</em></strong> <em>We process your information to provide, improve, and administer our Services, communicate with you (if you contact us), for security and fraud prevention, app diagnostics and improvement, and to comply with law.</em>
+    </p>
+    <p data-custom-class="body_text">
+        <strong>We process your personal information for a variety of reasons, depending on how you interact with our Services, including:</strong>
+    </p>
+    <ul>
+        <li data-custom-class="body_text"><strong>To identify and fix bugs, crashes, and performance issues.</strong> We analyze diagnostic data (if shared by you via OS settings) to improve the stability and performance of our Services.</li>
+        <li data-custom-class="body_text"><strong>To understand usage patterns and improve features.</strong> Analyzing aggregated or anonymized usage data helps us understand how users interact with our Services, allowing us to enhance user experience and prioritize feature development.</li>
+        <li data-custom-class="body_text"><strong>To maintain security and operation.</strong> Processing technical data helps ensure the security and proper functioning of our Services.</li>
+         <li data-custom-class="body_text"><strong>To respond to user inquiries/offer support to users.</strong> We may process information you provide when you contact us directly to respond to your requests.</li>
+        <li data-custom-class="body_text"><strong>To save or protect an individual's vital interest.</strong> We may process your information when necessary to save or protect an individual’s vital interest, such as to prevent harm.</li>
+        </ul>
+
+
+    <h2 data-custom-class="heading_1" id="legalbases">3. WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR INFORMATION?</h2>
+    <p data-custom-class="body_text">
+        <em><strong>In Short:</strong> We only process your personal information when we believe it is necessary and we have a valid legal reason (i.e., legal basis) to do so under applicable law, like with your consent (including consent provided via OS settings for diagnostics), to comply with laws, to provide you with services, to protect your rights, or to fulfill our legitimate business interests (like app improvement).</em>
+    </p>
+    <p data-custom-class="body_text">
+        <em><strong><u>If you are located in the EU or UK, this section applies to you.</u></strong></em>
+    </p>
+    <p data-custom-class="body_text">
+        The General Data Protection Regulation (GDPR) and UK GDPR require us to explain the valid legal bases we rely on in order to process your personal information. As such, we may rely on the following legal bases to process your personal information:
+    </p>
+    <ul>
+        <li data-custom-class="body_text">
+            <strong>Consent.</strong> We may process your information if you have given us permission (i.e., consent) to use your personal information for a specific purpose. This includes consent you may provide through your device's operating system settings to share diagnostic and usage data. You can withdraw your consent at any time, typically through those same OS settings or by contacting us (for consent given directly to us). Learn more about <a data-custom-class="link" href="#withdrawconsent">withdrawing your consent</a>.
+        </li>
+         <li data-custom-class="body_text">
+             <strong>Legitimate Interests.</strong> We may process your information when it is reasonably necessary to achieve our legitimate business interests and those interests do not outweigh your interests and fundamental rights and freedoms. For example, we may process diagnostic and usage data based on legitimate interests to analyze how our Services are used so we can improve them, ensure stability, and diagnose problems.
+         </li>
+         <li data-custom-class="body_text">
+            <strong>Legal Obligations.</strong> We may process your information where we believe it is necessary for compliance with our legal obligations, such as to cooperate with a law enforcement body or regulatory agency, exercise or defend our legal rights, or disclose your information as evidence in litigation in which we are involved.
+        </li>
+         <li data-custom-class="body_text">
+            <strong>Vital Interests.</strong> We may process your information where we believe it is necessary to protect your vital interests or the vital interests of a third party, such as situations involving potential threats to the safety of any person.
+        </li>
+    </ul>
+    <p data-custom-class="body_text">
+        <em><strong><u>If you are located in Canada, this section applies to you.</u></strong></em>
+    </p>
+    <p data-custom-class="body_text">
+        We may process your information if you have given us specific permission (i.e., express consent) to use your personal information for a specific purpose, or in situations where your permission can be inferred (i.e., implied consent). Consent for diagnostic data sharing may be managed via your device's OS settings. You can <a data-custom-class="link" href="#withdrawconsent">withdraw your consent</a> at any time.
+    </p>
+    <p data-custom-class="body_text">
+        In some exceptional cases, we may be legally permitted under applicable law to process your information without your consent, including, for example (list remains the same as previous version):
+    </p>
+    <ul>
+        <li data-custom-class="body_text">If collection is clearly in the interests of an individual and consent cannot be obtained in a timely way</li>
+        <li data-custom-class="body_text">For investigations and fraud detection and prevention</li>
+        <li data-custom-class="body_text">For business transactions provided certain conditions are met</li>
+        <li data-custom-class="body_text">If it is contained in a witness statement and the collection is necessary to assess, process, or settle an insurance claim</li>
+        <li data-custom-class="body_text">For identifying injured, ill, or deceased persons and communicating with next of kin</li>
+        <li data-custom-class="body_text">If we have reasonable grounds to believe an individual has been, is, or may be victim of financial abuse</li>
+        <li data-custom-class="body_text">If it is reasonable to expect collection and use with consent would compromise the availability or the accuracy of the information and the collection is reasonable for purposes related to investigating a breach of an agreement or a contravention of the laws of Canada or a province</li>
+        <li data-custom-class="body_text">If disclosure is required to comply with a subpoena, warrant, court order, or rules of the court relating to the production of records</li>
+        <li data-custom-class="body_text">If it was produced by an individual in the course of their employment, business, or profession and the collection is consistent with the purposes for which the information was produced</li>
+        <li data-custom-class="body_text">If the collection is solely for journalistic, artistic, or literary purposes</li>
+        <li data-custom-class="body_text">If the information is publicly available and is specified by the regulations</li>
+    </ul>
+
+    <h2 data-custom-class="heading_1" id="whoshare">4. WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?</h2>
+    <p data-custom-class="body_text">
+        <strong><em>In Short:</em></strong> <em>We may share information in specific situations described in this section and/or with specific third parties like service providers assisting with business transfers, if applicable. We do not sell your personal information.</em>
+    </p>
+    <p data-custom-class="body_text">
+        We do not sell or share your personal information with third parties for their marketing purposes. We may share diagnostic or usage data with service providers solely for the purpose of assisting us with app analytics or diagnostics, under strict confidentiality agreements, if applicable. We may also need to share your personal information in the following situations:
+    </p>
+    <ul>
+        <li data-custom-class="body_text">
+            <strong>Business Transfers.</strong> We may share or transfer your information in connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition of all or a portion of our business to another company.
+        </li>
+        <li data-custom-class="body_text">
+            <strong>Legal Requirements.</strong> We may disclose your information where we are legally required to do so in order to comply with applicable law, governmental requests, a judicial proceeding, court order, or legal process.
+        </li>
+         </ul>
+     <p data-custom-class="body_text">
+         Note that diagnostic data shared via your device's OS settings is initially handled by the platform provider (e.g., Apple) according to their privacy policies and your settings.
+    </p>
+
+
+    <h2 data-custom-class="heading_1" id="inforetain">5. HOW LONG DO WE KEEP YOUR INFORMATION?</h2>
+    <p data-custom-class="body_text">
+        <strong><em>In Short:</em></strong> <em>We keep your information for as long as necessary to fulfill the purposes outlined in this Privacy Notice (like app improvement and diagnostics) unless otherwise required by law.</em>
+    </p>
+    <p data-custom-class="body_text">
+        We will only keep your personal information for as long as it is necessary for the purposes set out in this Privacy Notice, unless a longer retention period is required or permitted by law (such as tax, accounting, or other legal requirements). For diagnostic and usage data collected via OS opt-in, we retain it only as long as needed for analysis, troubleshooting, and app improvement purposes, often in aggregated or anonymized form.
+    </p>
+    <p data-custom-class="body_text">
+        When we have no ongoing legitimate business need to process your personal information, we will either delete or anonymize such information, or, if this is not possible (for example, because your personal information has been stored in backup archives), then we will securely store your personal information and isolate it from any further processing until deletion is possible.
+    </p>
+
+    <h2 data-custom-class="heading_1" id="privacyrights">6. WHAT ARE YOUR PRIVACY RIGHTS?</h2>
+    <p data-custom-class="body_text">
+        <strong><em>In Short:</em></strong> <em>Depending on your region, you have rights regarding access, correction, deletion, and portability of your personal information. You can manage diagnostic data sharing via OS settings.</em>
+    </p>
+    <p data-custom-class="body_text">
+        In some regions (like the EEA, UK, Switzerland, and Canada), you have certain rights under applicable data protection laws. These may include the right (i) to request access and obtain a copy of your personal information, (ii) to request rectification or erasure; (iii) to restrict the processing of your personal information; (iv) if applicable, to data portability; and (v) not to be subject to automated decision-making. In certain circumstances, you may also have the right to object to the processing of your personal information (e.g., processing based on legitimate interests). You can make such a request concerning information we hold by contacting us using the details in the section "<a data-custom-class="link" href="#contact">HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</a>" below.
+    </p>
+     <p data-custom-class="body_text">
+         Regarding diagnostic and usage data collected via your device's OS settings, you typically control the sharing and can withdraw consent directly through those settings on your device.
+    </p>
+    <p data-custom-class="body_text">
+        We will consider and act upon any request regarding data we directly control in accordance with applicable data protection laws.
+    </p>
+    <p data-custom-class="body_text">
+        If you are located in the EEA or UK and you believe we are unlawfully processing your personal information, you also have the right to complain to your <a data-custom-class="link" href="https://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm" rel="noopener noreferrer" target="_blank">Member State data protection authority</a> or <a data-custom-class="link" href="https://ico.org.uk/make-a-complaint/data-protection-complaints/data-protection-complaints/" rel="noopener noreferrer" target="_blank">UK data protection authority</a>.
+    </p>
+    <p data-custom-class="body_text">
+        If you are located in Switzerland, you may contact the <a data-custom-class="link" href="https://www.edoeb.admin.ch/edoeb/en/home.html" rel="noopener noreferrer" target="_blank">Federal Data Protection and Information Commissioner</a>.
+    </p>
+
+    <h3 data-custom-class="heading_2" id="withdrawconsent">Withdrawing your consent</h3>
+    <p data-custom-class="body_text">
+        If we are relying on your consent to process your personal information, you have the right to withdraw your consent at any time. For consent provided via OS settings (e.g., for diagnostic data), withdrawal is typically managed through those same device settings. For any consent provided directly to us (e.g., if you contacted us), you can withdraw that consent by contacting us using the details in the section "<a data-custom-class="link" href="#contact">HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</a>" below.
+    </p>
+    <p data-custom-class="body_text">
+        However, please note that this will not affect the lawfulness of the processing before its withdrawal nor, when applicable law allows, will it affect the processing of your personal information conducted in reliance on lawful processing grounds other than consent (such as legitimate interests for troubleshooting).
+    </p>
+    <p data-custom-class="body_text">
+        If you have questions or comments about your privacy rights, you may email us at <a href="mailto:privacy@felixparey.com" data-custom-class="link">privacy@felixparey.com</a>.
+    </p>
+
+    <h2 data-custom-class="heading_1" id="DNT">7. CONTROLS FOR DO-NOT-TRACK FEATURES</h2>
+    <p data-custom-class="body_text">
+        Most web browsers and some mobile operating systems and mobile applications include a Do-Not-Track ("DNT") feature or setting you can activate to signal your privacy preference not to have data about your online Browse activities monitored and collected. At this stage, no uniform technology standard for recognizing and implementing DNT signals has been finalized. As such, we do not currently respond to DNT browser signals or any other mechanism that automatically communicates your choice not to be tracked online. If a standard for online tracking is adopted that we must follow in the future, we will inform you about that practice in a revised version of this Privacy Notice.
+    </p>
+
+    <h2 data-custom-class="heading_1" id="uslaws">8. DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?</h2>
+     <p data-custom-class="body_text">
+        <strong><em>In Short:</em></strong> <em>If you are a resident of certain US states, you may have specific rights regarding your personal information, including access, correction, deletion, and opting out of sales or sharing (though we do not sell or share personal information as defined by these laws).</em>
+    </p>
+    <h3 data-custom-class="heading_2">Categories of Personal Information We Collect</h3>
+    <p data-custom-class="body_text">We have collected the following categories of personal information in the past twelve (12) months, primarily through diagnostic and usage data shared via OS opt-in:</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Examples</th>
+                <th>Collected</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>A. Identifiers</td>
+                <td>Online identifiers (like device identifiers), Internet Protocol (IP) address (potentially anonymized/truncated by platform provider). Note: We do not collect real name, postal address, email, etc., unless you voluntarily provide it (e.g., by contacting support).</td>
+                <td style="text-align: center;">YES (from diagnostics)</td> </tr>
+             <tr>
+                <td>B. Personal information as defined in the California Customer Records statute</td>
+                <td>Name, contact information, education, employment, employment history, and financial information</td>
+                 <td style="text-align: center;">NO (unless provided voluntarily, e.g., contacting support)</td>
+            </tr>
+             <tr>
+                <td>C. Protected classification characteristics under state or federal law</td>
+                <td>Gender, age, date of birth, race and ethnicity, national origin, marital status, and other demographic data</td>
+                 <td style="text-align: center;">NO</td>
+            </tr>
+             <tr>
+                <td>D. Commercial information</td>
+                <td>Transaction information, purchase history, financial details, and payment information</td>
+                 <td style="text-align: center;">NO</td>
+            </tr>
+             <tr>
+                <td>E. Biometric information</td>
+                <td>Fingerprints and voiceprints</td>
+                 <td style="text-align: center;">NO</td>
+            </tr>
+             <tr>
+                <td>F. Internet or other similar network activity</td>
+                <td>Interactions with our Services (e.g., features used, session duration), diagnostic information (crash logs), device event information.</td>
+                 <td style="text-align: center;">YES (from diagnostics)</td> </tr>
+             <tr>
+                <td>G. Geolocation data</td>
+                <td>Device location (We do not typically receive precise location. Coarse location might be inferred from IP address or included in some diagnostic reports provided by the platform.)</td>
+                 <td style="text-align: center;">YES</td> </tr>
+            <tr>
+                <td>H. Audio, electronic, sensory, or similar information</td>
+                <td>Images and audio, video or call recordings created in connection with our business activities</td>
+                <td style="text-align: center;">NO</td>
+            </tr>
+             <tr>
+                <td>I. Professional or employment-related information</td>
+                <td>Business contact details, job title, work history (only if you apply for a job or contact us in a professional capacity)</td>
+                 <td style="text-align: center;">NO (unless provided voluntarily)</td>
+            </tr>
+             <tr>
+                <td>J. Education Information</td>
+                <td>Student records and directory information</td>
+                 <td style="text-align: center;">NO</td>
+            </tr>
+             <tr>
+                <td>K. Inferences drawn from collected personal information</td>
+                <td>We do not typically create profiles or draw inferences about preferences or characteristics from diagnostic data.</td>
+                 <td style="text-align: center;">NO</td>
+            </tr>
+            <tr>
+                <td>L. Sensitive personal Information</td>
+                <td></td>
+                <td style="text-align: center;">NO</td>
+            </tr>
+        </tbody>
+    </table>
+     <p data-custom-class="body_text">We may also collect other personal information outside of these categories through instances where you interact with us directly (e.g., contacting support) as described below:</p>
+     <ul>
+         <li data-custom-class="body_text">Receiving help through our customer support channels;</li>
+         <li data-custom-class="body_text">Participation in customer surveys or contests (if any); and</li>
+         <li data-custom-class="body_text">Facilitation in the delivery of our Services and to respond to your inquiries.</li>
+     </ul>
+
+    <h3 data-custom-class="heading_2">Sources of Personal Information</h3>
+    <p data-custom-class="body_text">Learn more about the sources of personal information we collect in Section 1: "<a data-custom-class="link" href="#infocollect">WHAT INFORMATION DO WE COLLECT?</a>"</p>
+
+    <h3 data-custom-class="heading_2">How We Use and Share Personal Information</h3>
+     <p data-custom-class="body_text">Learn more about how we use your personal information in Section 2: "<a data-custom-class="link" href="#infouse">HOW DO WE PROCESS YOUR INFORMATION?</a>" and how we share it in Section 4: "<a data-custom-class="link" href="#whoshare">WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?</a>"</p>
+
+    <h3 data-custom-class="heading_2">Will your information be shared with anyone else?</h3>
+    <p data-custom-class="body_text">
+        We may disclose your personal information with our service providers pursuant to a written contract between us and each service provider, solely for purposes like assisting with diagnostics or analytics, or as needed for business transfers or legal requirements. Learn more in Section 4: "<a data-custom-class="link" href="#whoshare">WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?</a>"
+    </p>
+    <p data-custom-class="body_text">
+        We use personal information (primarily diagnostic data) for our own business purposes, such as internal research for technological development, app stabilization, and demonstration. This is not considered "selling" or "sharing" under most US state privacy laws.
+    </p>
+    <p data-custom-class="body_text">
+        We have not sold or "shared" (as defined under CPRA) personal information to third parties for cross-context behavioral advertising or monetary value in the preceding twelve (12) months. We will not sell or share personal information in the future.
+    </p>
+
+    <h3 data-custom-class="heading_2">Your Rights</h3>
+    <p data-custom-class="body_text">
+        Depending on your state of residence, you have rights under certain US state data protection laws. However, these rights are not absolute, and in certain cases, we may decline your request as permitted by law. These rights may include:
+    </p>
+    <ul>
+        <li data-custom-class="body_text"><strong>Right to know</strong> whether or not we are processing your personal data</li>
+        <li data-custom-class="body_text"><strong>Right to access</strong> your personal data</li>
+        <li data-custom-class="body_text"><strong>Right to correct</strong> inaccuracies in your personal data</li>
+        <li data-custom-class="body_text"><strong>Right to request</strong> the deletion of your personal data</li>
+        <li data-custom-class="body_text"><strong>Right to obtain a copy</strong> of the personal data you previously shared with us</li>
+        <li data-custom-class="body_text"><strong>Right to non-discrimination</strong> for exercising your rights</li>
+        <li data-custom-class="body_text"><strong>Right to opt out</strong> of the processing of your personal data if it is used for targeted advertising, the sale of personal data, or certain types of profiling (Note: We do not engage in these activities).</li>
+         </ul>
+    <p data-custom-class="body_text">
+        Depending upon the state where you live, you may also have the following rights (list remains the same as previous version):
+    </p>
+     <ul>
+        <li data-custom-class="body_text">Right to access the categories of personal data being processed</li>
+        <li data-custom-class="body_text">Right to obtain a list of the categories of third parties to which we have disclosed personal data</li>
+        <li data-custom-class="body_text">Right to obtain a list of specific third parties to which we have disclosed personal data</li>
+        <li data-custom-class="body_text">Right to review, understand, question, and correct how personal data has been profiled</li>
+        <li data-custom-class="body_text">Right to limit use and disclosure of sensitive personal data (Note: We do not collect sensitive data).</li>
+        <li data-custom-class="body_text">Right to opt out of the collection of sensitive data and personal data collected through the operation of a voice or facial recognition feature (Note: We do not collect sensitive data or use these features).</li>
+    </ul>
+
+
+    <h3 data-custom-class="heading_2">How to Exercise Your Rights</h3>
+    <p data-custom-class="body_text">
+        To exercise these rights regarding information we may hold (e.g., if you contacted us directly), you can contact us by submitting a <a data-custom-class="link" href="https://app.termly.io/notify/0df80ea1-d38f-4471-af6e-8b20789c3866" rel="noopener noreferrer" target="_blank">data subject access request</a>, by emailing us at <a href="mailto:privacy@felixparey.com" data-custom-class="link">privacy@felixparey.com</a>, or by referring to the contact details at the bottom of this document. To manage diagnostic data sharing, please use your device's OS settings.
+    </p>
+    <p data-custom-class="body_text">
+        Under certain US state data protection laws, you can designate an authorized agent to make a request on your behalf. We may deny a request from an authorized agent that does not submit proof that they have been validly authorized to act on your behalf in accordance with applicable laws.
+    </p>
+
+    <h3 data-custom-class="heading_2">Request Verification</h3>
+    <p data-custom-class="body_text">
+        Upon receiving your request regarding data we may hold, we will need to verify your identity. We will only use personal information provided in your request for verification. If we cannot verify your identity from the information already maintained by us (which may be minimal), we may request additional information for verification and security/fraud-prevention purposes.
+    </p>
+    <p data-custom-class="body_text">
+        If you submit the request through an authorized agent, we may need to collect additional information to verify your identity before processing your request and the agent will need to provide a written and signed permission from you to submit such request on your behalf.
+    </p>
+
+    <h3 data-custom-class="heading_2">Appeals</h3>
+     <p data-custom-class="body_text">
+        Under certain US state data protection laws, if we decline to take action regarding your request, you may appeal our decision by emailing us at <a href="mailto:privacy@felixparey.com" data-custom-class="link">privacy@felixparey.com</a>. We will inform you in writing of any action taken or not taken in response to the appeal, including a written explanation of the reasons for the decisions. If your appeal is denied, you may submit a complaint to your state attorney general.
+    </p>
+
+    <h3 data-custom-class="heading_2">California "Shine The Light" Law</h3>
+     <p data-custom-class="body_text">
+        California Civil Code Section 1798.83 (Shine The Light law) permits users who are California residents to request certain information regarding disclosure of personal information to third parties for their direct marketing purposes. We do not disclose personal information to third parties for their direct marketing purposes.
+    </p>
+
+    <h2 data-custom-class="heading_1" id="otherlaws">9. DO OTHER REGIONS HAVE SPECIFIC PRIVACY RIGHTS?</h2>
+    <p data-custom-class="body_text">
+        <em><strong>In Short:</strong> You may have additional rights based on the country you reside in.</em>
+    </p>
+    <h3 data-custom-class="heading_2">Australia and New Zealand</h3>
+     <p data-custom-class="body_text">
+        We collect and process your personal information under the obligations and conditions set by Australia's Privacy Act 1988 and New Zealand's Privacy Act 2020 (Privacy Act).
+    </p>
+     <p data-custom-class="body_text">
+        This Privacy Notice satisfies the notice requirements defined in both Privacy Acts, in particular: what personal information we collect from you, from which sources, for which purposes, and other recipients of your personal information.
+    </p>
+     <p data-custom-class="body_text">
+        If you do not wish to provide the personal information necessary to fulfill their applicable purpose (e.g., diagnostic data via OS opt-in), it may affect our ability to diagnose issues or improve services based on usage patterns, but core functionality should remain. If you contact us, failure to provide necessary information may affect our ability to respond.
+    </p>
+     <p data-custom-class="body_text">
+        At any time, you have the right to request access to or correction of your personal information that we hold. You can make such a request by contacting us by using the contact details provided in the section "<a data-custom-class="link" href="#request">HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?</a>"
+    </p>
+     <p data-custom-class="body_text">
+        If you believe we are unlawfully processing your personal information, you have the right to submit a complaint about a breach of the Australian Privacy Principles to the <a data-custom-class="link" href="https://www.oaic.gov.au/privacy/privacy-complaints/lodge-a-privacy-complaint-with-us" rel="noopener noreferrer" target="_blank">Office of the Australian Information Commissioner</a> and a breach of New Zealand's Privacy Principles to the <a data-custom-class="link" href="https://www.privacy.org.nz/your-rights/making-a-complaint/" rel="noopener noreferrer" target="_blank">Office of New Zealand Privacy Commissioner</a>.
+    </p>
+
+    <h3 data-custom-class="heading_2">Republic of South Africa</h3>
+     <p data-custom-class="body_text">
+        At any time, you have the right to request access to or correction of your personal information that we hold. You can make such a request by contacting us by using the contact details provided in the section "<a data-custom-class="link" href="#request">HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?</a>"
+    </p>
+    <p data-custom-class="body_text">
+        If you are unsatisfied with the manner in which we address any complaint with regard to our processing of personal information, you can contact the office of the regulator, the details of which are:
+    </p>
+     <p data-custom-class="body_text">
+        <a data-custom-class="link" href="https://inforegulator.org.za/" rel="noopener noreferrer" target="_blank">The Information Regulator (South Africa)</a><br>
+        General enquiries: <a data-custom-class="link" href="mailto:enquiries@inforegulator.org.za" rel="noopener noreferrer" target="_blank">enquiries@inforegulator.org.za</a><br>
+        Complaints (complete POPIA/PAIA form 5): <a data-custom-class="link" href="mailto:PAIAComplaints@inforegulator.org.za" rel="noopener noreferrer" target="_blank">PAIAComplaints@inforegulator.org.za</a> & <a data-custom-class="link" href="mailto:POPIAComplaints@inforegulator.org.za" rel="noopener noreferrer" target="_blank">POPIAComplaints@inforegulator.org.za</a>
+    </p>
+
+
+    <h2 data-custom-class="heading_1" id="policyupdates">10. DO WE MAKE UPDATES TO THIS NOTICE?</h2>
+    <p data-custom-class="body_text">
+        <em><strong>In Short:</strong> Yes, we will update this notice as necessary to stay compliant with relevant laws and reflect changes in our practices.</em>
+    </p>
+    <p data-custom-class="body_text">
+        We may update this Privacy Notice from time to time. The updated version will be indicated by an updated "Last updated" date at the top of this Privacy Notice. If we make material changes to this Privacy Notice, we may notify you either by prominently posting a notice of such changes or by directly sending you a notification (if we have your contact information). We encourage you to review this Privacy Notice frequently to be informed of how we are protecting your information.
+    </p>
+
+    <h2 data-custom-class="heading_1" id="contact">11. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</h2>
+    <p data-custom-class="body_text">
+        If you have questions or comments about this notice, you may email us at <a href="mailto:privacy@felixparey.com" data-custom-class="link">privacy@felixparey.com</a> or contact us by post at:
+    </p>
+    <p data-custom-class="body_text">
+        Felix Parey<br>
+        Kösters Hof 11<br>
+        Rostock, Mecklenburg-Vorpommern 18059<br>
+        Germany
+    </p>
+
+    <h2 data-custom-class="heading_1" id="request">12. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?</h2>
+    <p data-custom-class="body_text">
+        Based on the applicable laws of your country or state of residence, you may have the right to request access to the personal information we collect from you (primarily data you provided voluntarily, e.g., if you contacted support), details about how we have processed it, correct inaccuracies, or delete your personal information. To make such a request regarding data we may hold, please fill out and submit a <a data-custom-class="link" href="https://app.termly.io/notify/0df80ea1-d38f-4471-af6e-8b20789c3866" rel="noopener noreferrer" target="_blank">data subject access request</a> or contact us via email/post. To manage diagnostic data sharing, please use your device's OS settings.
+    </p>
+
 </body>
 </html>
