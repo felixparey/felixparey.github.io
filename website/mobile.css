@@ -1,0 +1,166 @@
+/* New mobile nav styles */
+@media (max-width: 768px) {
+    header {
+        padding: 0.5rem 0;
+    }
+    
+    nav {
+        padding: 0.75rem 1.5rem;
+        width: 95%;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+    
+    /* Burger menu button */
+    .burger-menu {
+        display: flex;
+        position: relative;
+        z-index: 10;
+        margin-left: auto; /* Add this to push the burger to the right */
+    }
+    
+    /* Mobile nav menu container */
+    .nav-links {
+        position: absolute;
+        top: 100%; /* Position below the nav header */
+        left: 0;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the start (left) */
+        padding-left: 1.5rem; /* Add some padding to align with header text */
+        z-index: 10;
+    }
+    
+    /* When menu is shown */
+    .nav-links.active {
+        display: flex;
+    }
+    
+    /* The glass background for the mobile menu */
+    nav.expanded::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.1); /* Light mode default */
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 0 0 15px 15px;
+        border: 1px solid var(--border-color);
+        border-top: none;
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+        transition: height 0.3s ease;
+        /* Height is controlled by --mobile-menu-height set in JS. 
+           Defaults to 0px if var not set or when menu is closed (JS sets it to 0px). */
+        height: var(--mobile-menu-height, 0px); 
+        z-index: 1;
+    }
+    
+    @media (prefers-color-scheme: dark) {
+        nav.expanded::before {
+            background: rgba(30, 30, 30, 0.7);
+        }
+    }
+    
+    .nav-links li {
+        margin: 0.5rem 0;
+        width: auto; /* Adjust width to content or a specific value if needed */
+        text-align: left; /* Align text to the left */
+        position: relative;
+        z-index: 2;
+    }
+    
+    .nav-links a {
+        font-size: 1.1rem;
+        padding: 0.75rem 1rem;
+        display: block;
+        width: 100%;
+        color: var(--text-color);
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        font-weight: 600;
+    }
+    
+    .nav-links a:hover {
+        color: var(--accent-color);
+        background-color: rgba(48, 209, 88, 0.1);
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 100px 1rem 2rem 1rem;
+        min-height: 90vh;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 2.5rem;
+        width: 92%;
+        margin: 0 auto;
+        border-radius: 12px;
+    }
+    
+    .profile-image {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+    
+    .profile-image img {
+        width: 240px;
+        height: 240px;
+    }
+    
+    .profile-text h1::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .experience-header {
+        flex-direction: column;
+    }
+    
+    .experience-date {
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Section spacing */
+    .container {
+        width: 92%;
+        padding: 1rem 0;
+    }
+    
+    .experience-content,
+    .contact-content {
+        padding: 1.5rem;
+    }
+    
+    .projects-grid {
+        gap: 1.5rem;
+    }
+    
+    .project-card,
+    .contact-content,
+    .experience-content {
+        margin-bottom: 1rem;
+    }
+    
+    /* Contact section adjustments */
+    .contact-links {
+        gap: 1rem;
+    }
+    
+    .contact-links a {
+        padding: 0.7rem 1.2rem;
+    }
+}
