@@ -63,25 +63,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-    // Language detection for support link
-    function setupSupportLink() {
-        const supportLink = document.getElementById('support-link');
-        if (supportLink) {
-            // Detect user's language preference
-            const userLanguage = navigator.language || navigator.userLanguage;
-            const isGerman = userLanguage.startsWith('de');
-            
-            if (isGerman) {
-                supportLink.href = 'support-de.html';
-                supportLink.textContent = 'Support';
-            } else {
-                supportLink.href = 'support-en.html';
-                supportLink.textContent = 'Support';
-            }
-        }
-    }
-
-    // Initialize support link
-    setupSupportLink();
 });
