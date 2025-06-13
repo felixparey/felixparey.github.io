@@ -74,17 +74,25 @@ h2 {
 
 /* Project section styling for better spacing in Impressum and similar pages */
 .project-section {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 .project-section h2 {
-    margin-top: 2.5rem;
+    margin-top: 3rem;
     margin-bottom: 1.5rem;
     text-align: left;
 }
 
 .project-section:first-child h2 {
     margin-top: 0;
+}
+
+.project-section p {
+    margin-bottom: 1.5rem;
+}
+
+.project-section p:last-child {
+    margin-bottom: 0;
 }
 
 /* Glassmorphism Effect */

@@ -12,6 +12,50 @@
             color: #333; /* Default text color */
             margin: 2rem; /* Added some margin */
             background: #fff; /* Explicit white background */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: #121212;
+                color: #f0f0f0;
+            }
+            
+            [data-custom-class='title'], [data-custom-class='title'] *, h1 {
+                color: #f0f0f0 !important;
+            }
+            
+            [data-custom-class='heading_1'], [data-custom-class='heading_1'] *, h2 {
+                color: #f0f0f0 !important;
+            }
+            
+            [data-custom-class='heading_2'], [data-custom-class='heading_2'] *, h3 {
+                color: #f0f0f0 !important;
+            }
+            
+            [data-custom-class='body_text'], [data-custom-class='body_text'] *, p, li {
+                color: #c0c0c0 !important;
+            }
+            
+            [data-custom-class='subtitle'] {
+                color: #c0c0c0 !important;
+            }
+            
+            th {
+                background-color: #333 !important;
+                color: #f0f0f0 !important;
+                border-color: #555 !important;
+            }
+            
+            td {
+                border-color: #555 !important;
+                color: #c0c0c0 !important;
+            }
+            
+            table {
+                border-color: #555 !important;
+            }
         }
 
         /* Custom Classes from Original - Refined */

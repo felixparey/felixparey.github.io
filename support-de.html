@@ -15,6 +15,25 @@
             padding: 1em;
             background-color: #f9f9f9;
             color: #333;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212;
+                color: #f0f0f0;
+            }
+            
+            h1 {
+                color: #f0f0f0 !important;
+                border-bottom-color: #555 !important;
+            }
+            
+            .container {
+                background-color: #1e1e1e !important;
+                box-shadow: 0 0 10px rgba(255,255,255,0.05) !important;
+            }
         }
         h1 {
             color: #1a1a1a;
