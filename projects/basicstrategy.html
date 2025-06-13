@@ -40,21 +40,26 @@
         
         .project-gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
             margin: 2rem 0;
+            justify-items: center;
         }
         
         .gallery-item {
-            border-radius: 10px;
+            border-radius: 15px;
             overflow: hidden;
-            height: 500px;
+            max-width: 350px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            background: var(--card-bg);
         }
         
         .gallery-item img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
+            display: block;
+            aspect-ratio: 2064 / 2752;
+            object-fit: contain;
         }
         
         .project-section {
@@ -147,10 +152,9 @@
                 <div class="project-section">
                     <h2>Overview</h2>
                     <p>
-                        NoteCanvas is a powerful digital note-taking app optimized for the iPad and Apple Pencil. 
-                        It combines the natural feeling of writing on paper with the power of digital organization 
-                        and editing. The app features multiple paper styles, pen types, and organization tools 
-                        to create a complete note-taking experience for students, professionals, and artists.
+                        Basic Strategy: Blackjack is a companion app that helps players make optimal decisions at the blackjack table. 
+                        Using mathematically proven basic strategy, the app guides users through every hand by analyzing their cards 
+                        and the dealer's upcard to recommend the best possible move - whether to hit, stand, double down, or split.
                     </p>
                 </div>
                 
@@ -169,44 +173,39 @@
                 <div class="project-section">
                     <h2>Key Features</h2>
                     <ul>
-                        <li>Optimized for Apple Pencil with pressure sensitivity and tilt support</li>
-                        <li>Multiple paper styles (lined, grid, dot grid, planner templates)</li>
-                        <li>Variety of pen, marker, and brush styles with customizable colors</li>
-                        <li>Handwriting recognition and search capabilities</li>
-                        <li>Smart shape recognition for drawing perfect shapes</li>
-                        <li>Folder organization system with tags and favorites</li>
-                        <li>Automatic cloud backup and sync across devices</li>
-                        <li>PDF import, annotation, and export</li>
+                        <li>Real-time basic strategy recommendations</li>
+                        <li>Support for various blackjack rule variations</li>
+                        <li>Clean, intuitive card selection interface</li>
+                        <li>Instant feedback on optimal plays</li>
+                        <li>Beginner-friendly explanations of each decision</li>
+                        <li>Practice mode for learning basic strategy</li>
+                        <li>Optimized for both iPhone and iPad</li>
                     </ul>
                 </div>
                 
                 <div class="project-section">
                     <h2>Technical Details</h2>
                     <p>
-                        NoteCanvas was built using Swift with PencilKit for the drawing functionality, 
-                        providing a smooth and responsive writing experience. The app uses CoreData for 
-                        local storage and CloudKit for syncing notes across devices. Advanced features 
-                        like handwriting recognition were implemented using Vision framework.
+                        Basic Strategy: Blackjack was built using SwiftUI for a modern, responsive interface across iOS and iPadOS. 
+                        The app implements mathematically precise basic strategy algorithms and uses StoreKit for in-app purchases. 
+                        The interface focuses on simplicity and speed to provide quick decisions during gameplay.
                     </p>
                     
                     <div class="tech-stack">
                         <span>Swift</span>
-                        <span>PencilKit</span>
-                        <span>CloudKit</span>
-                        <span>CoreData</span>
-                        <span>Vision</span>
-                        <span>PDFKit</span>
+                        <span>SwiftUI</span>
+                        <span>StoreKit</span>
+                        <span>iOS</span>
+                        <span>iPadOS</span>
                     </div>
                 </div>
                 
                 <div class="project-section">
                     <h2>Development Challenges</h2>
                     <p>
-                        One of the main challenges was creating a writing experience that felt natural 
-                        and responsive, with minimal latency. This required careful optimization of the 
-                        drawing engine and integration with PencilKit. Another challenge was implementing 
-                        the handwriting recognition system that could accurately convert handwritten notes 
-                        to searchable text across different handwriting styles.
+                        The main challenge was implementing the complex basic strategy logic accurately while maintaining a simple, 
+                        fast user interface. This required optimizing the decision algorithms and creating an intuitive card selection 
+                        system that works seamlessly on both iPhone and iPad screen sizes.
                     </p>
                 </div>
             </div>
