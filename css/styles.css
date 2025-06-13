@@ -499,6 +499,27 @@ nav.expanded {
     color: white;
 }
 
+.project-buttons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.app-store-btn {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.app-store-btn:hover {
+    transform: scale(1.05);
+}
+
+.app-store-btn img {
+    height: 40px;
+    width: auto;
+}
+
 /* Experience Section */
 .experience {
     padding: 2rem 0;

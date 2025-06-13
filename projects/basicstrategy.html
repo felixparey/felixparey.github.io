@@ -39,28 +39,30 @@
         }
         
         .project-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
             justify-items: center;
+            margin-bottom: 4rem; /* Increased padding below gallery */
+            padding-bottom: 2rem; /* Added padding for extra spacing */
         }
-        
-        .gallery-item {
-            border-radius: 15px;
-            overflow: hidden;
-            max-width: 350px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            background: var(--card-bg);
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-            aspect-ratio: 2064 / 2752;
-            object-fit: contain;
-        }
+
+.gallery-item {
+    aspect-ratio: 330 / 717;
+    flex: 1 1 calc(33.333% - 1rem); /* 3 items per row with gap */
+    max-width: 300px; /* optional: cap max size */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    background: var(--card-bg);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* or 'contain' if you want full image shown */
+    display: block;
+}
         
         .project-section {
             margin-bottom: 2.5rem;
@@ -156,6 +158,11 @@
                         Using mathematically proven basic strategy, the app guides users through every hand by analyzing their cards 
                         and the dealer's upcard to recommend the best possible move - whether to hit, stand, double down, or split.
                     </p>
+                    <div class="project-buttons">
+                        <a href="https://apps.apple.com/app/basic-strategy-blackjack/id6739024073" target="_blank" class="app-store-btn">
+                            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" style="height: 50px;">
+                        </a>
+                    </div>
                 </div>
                 
                 <div class="project-gallery">
