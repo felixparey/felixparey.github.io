@@ -72,8 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const userLanguage = navigator.language || navigator.userLanguage;
             const isGerman = userLanguage.startsWith('de');
             
-            console.log('Setting up support link. Language:', userLanguage, 'Is German:', isGerman);
-            
             if (isGerman) {
                 supportLink.href = 'support-de.html';
                 supportLink.textContent = 'Support';
@@ -81,10 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 supportLink.href = 'support-en.html';
                 supportLink.textContent = 'Support';
             }
-            
-            console.log('Support link set to:', supportLink.href);
-        } else {
-            console.log('Support link element not found');
         }
     }
 
