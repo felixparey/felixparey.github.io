@@ -512,7 +512,10 @@ nav.expanded {
 }
 
 .app-store-btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
     transition: transform 0.2s ease;
 }
 
@@ -523,6 +526,7 @@ nav.expanded {
 .app-store-btn img {
     height: 40px;
     width: auto;
+    display: block;
 }
 
 /* Experience Section */
