@@ -35,9 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Close mobile menu when a nav link is clicked
-    document.querySelectorAll('.nav-links a').forEach(link => {
+    document.querySelectorAll('.nav-links a, .logo').forEach(link => {
         link.addEventListener('click', () => {
-            if (burgerMenu.classList.contains('active')) { // Only if menu is open
+            if (burgerMenu && burgerMenu.classList.contains('active')) { // Only if menu is open
                 burgerMenu.classList.remove('active');
                 nav.classList.remove('expanded');
                 navLinks.classList.remove('active'); // Also hide links
