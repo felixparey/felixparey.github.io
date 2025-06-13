@@ -72,6 +72,21 @@ h2 {
     display: inline-block;
 }
 
+/* Project section styling for better spacing in Impressum and similar pages */
+.project-section {
+    margin-bottom: 2rem;
+}
+
+.project-section h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.project-section:first-child h2 {
+    margin-top: 0;
+}
+
 /* Glassmorphism Effect */
 .glassmorphism {
     background: rgba(255, 255, 255, 0.1);
@@ -829,7 +844,7 @@ nav.expanded {
 
 /* Footer Styles */
 footer {
-    background: rgba(0, 0, 0, 0.05);
+    background: var(--card-bg);
     padding: 2rem 0;
     margin-top: 4rem;
 }
