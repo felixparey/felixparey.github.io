@@ -1,14 +1,13 @@
-# Developer Portfolio Website
+# Felix Parey – Portfolio Website
 
-A minimal portfolio website showcasing iOS and iPadOS development projects. This website features a modern glassmorphism design with a dark theme and gradient background.
+This is my personal portfolio website. Its sole purpose is to showcase my iOS, iPadOS, and visionOS projects and to act as a central hub for the privacy policy and terms of use for my apps.
 
 ## Features
 
-- Responsive design that works on mobile and desktop
-- Glassmorphism UI components
+- Responsive, modern glassmorphism design
 - Project showcase with detail pages
-- Dark theme with gradient background
-- Smooth scrolling navigation
+- Centralized access to privacy policy and terms of use
+- No commercial intent or user tracking
 
 ## Technologies Used
 
@@ -19,23 +18,18 @@ A minimal portfolio website showcasing iOS and iPadOS development projects. This
 
 ## Deployment
 
-This website is designed to be easily deployed on GitHub Pages:
-
-1. Push this repository to GitHub
-2. Go to the repository settings
-3. Navigate to the "Pages" section
-4. Set the source branch to "main" or "master"
-5. Save the changes and wait for deployment
+This website is designed for static hosting (e.g., GitHub Pages).
 
 ## Customization
 
-To customize this portfolio for your own use:
+- Replace images and project details with your own if you fork this repo.
+- Update personal information in `index.html` and project pages.
 
-1. Replace placeholder images with your own
-2. Update the personal information and project details in index.html
-3. Modify project detail pages in the projects directory
-4. Adjust colors in the CSS variables section of styles.css
+## Legal
+
+- [Privacy Policy](privacy-policy.html)
+- [Terms of Use](terms-of-use.html)
 
 ## License
 
-This project is available for personal and commercial use.
+This project is available for personal and non-commercial use only.
